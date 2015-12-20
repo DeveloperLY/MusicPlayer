@@ -23,6 +23,8 @@
 		CDA052D71C26DBDF0041499B /* LYMusicListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA052D51C26DBDF0041499B /* LYMusicListCell.m */; };
 		CDA052D81C26DBDF0041499B /* LYMusicListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA052D61C26DBDF0041499B /* LYMusicListCell.xib */; };
 		CDA052DB1C26E2ED0041499B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA052DA1C26E2ED0041499B /* UIView+Extension.m */; };
+		CDA052DF1C26EB650041499B /* LYAudioTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA052DE1C26EB650041499B /* LYAudioTool.m */; };
+		CDA052E21C26EE0A0041499B /* LYMusicOperationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA052E11C26EE0A0041499B /* LYMusicOperationTool.m */; };
 		CDADCA891C2522A200F4AFC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDADCA871C2522A200F4AFC2 /* Main.storyboard */; };
 		CDADCA8B1C2522A200F4AFC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDADCA8A1C2522A200F4AFC2 /* Assets.xcassets */; };
 		CDADCA8E1C2522A200F4AFC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDADCA8C1C2522A200F4AFC2 /* LaunchScreen.storyboard */; };
@@ -127,6 +129,11 @@
 		CDA052D91C26E2ED0041499B /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		CDA052DA1C26E2ED0041499B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		CDA052DC1C26E44E0041499B /* MusicPlayer.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPlayer.pch; sourceTree = "<group>"; };
+		CDA052DD1C26EB650041499B /* LYAudioTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAudioTool.h; sourceTree = "<group>"; };
+		CDA052DE1C26EB650041499B /* LYAudioTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAudioTool.m; sourceTree = "<group>"; };
+		CDA052E01C26EE0A0041499B /* LYMusicOperationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMusicOperationTool.h; sourceTree = "<group>"; };
+		CDA052E11C26EE0A0041499B /* LYMusicOperationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMusicOperationTool.m; sourceTree = "<group>"; };
+		CDA052E31C26EE5A0041499B /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		CDADCA7B1C2522A200F4AFC2 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDADCA881C2522A200F4AFC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDADCA8A1C2522A200F4AFC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -435,6 +442,11 @@
 		CDADCAC31C25237800F4AFC2 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				CDA052E31C26EE5A0041499B /* Singleton.h */,
+				CDA052DD1C26EB650041499B /* LYAudioTool.h */,
+				CDA052DE1C26EB650041499B /* LYAudioTool.m */,
+				CDA052E01C26EE0A0041499B /* LYMusicOperationTool.h */,
+				CDA052E11C26EE0A0041499B /* LYMusicOperationTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -689,6 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD9B446D1C26ACEC004AB2AE /* NSObject+MJCoding.m in Sources */,
+				CDA052DF1C26EB650041499B /* LYAudioTool.m in Sources */,
 				CD9B44671C26ACEC004AB2AE /* MJExtensionConst.m in Sources */,
 				CD9B446C1C26ACEC004AB2AE /* NSObject+MJClass.m in Sources */,
 				CD9B446A1C26ACEC004AB2AE /* MJPropertyKey.m in Sources */,
@@ -703,6 +716,7 @@
 				CD9B444A1C26AB75004AB2AE /* LYMusicModel.m in Sources */,
 				CD9B446B1C26ACEC004AB2AE /* MJPropertyType.m in Sources */,
 				CDADCACF1C2524E000F4AFC2 /* LYListTableViewController.m in Sources */,
+				CDA052E21C26EE0A0041499B /* LYMusicOperationTool.m in Sources */,
 				CD9B446E1C26ACEC004AB2AE /* NSObject+MJKeyValue.m in Sources */,
 				CD9B44701C26ACEC004AB2AE /* NSString+MJExtension.m in Sources */,
 				CDADCACC1C2524BF00F4AFC2 /* LYDetailViewController.m in Sources */,

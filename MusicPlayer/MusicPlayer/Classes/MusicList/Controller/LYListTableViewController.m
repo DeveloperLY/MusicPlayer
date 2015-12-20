@@ -10,6 +10,7 @@
 #import "LYMusicModel.h"
 #import "LYMusicDataTool.h"
 #import "LYMusicListCell.h"
+#import "LYMusicOperationTool.h"
 
 @interface LYListTableViewController ()
 
@@ -124,6 +125,9 @@
     LYMusicModel *musicModel = self.musicModels[indexPath.row];
     // TODO 播放音乐, 跳转页面
     NSLog(@"播放音乐---%@", musicModel.name);
+    
+    // 播放音乐
+    [[LYMusicOperationTool shareLYMusicOperationTool] playMusicWithMusicModel:musicModel];
     
 }
 
