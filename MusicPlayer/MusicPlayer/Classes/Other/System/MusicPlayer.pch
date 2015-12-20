@@ -1,0 +1,14 @@
+//
+//  MusicPlayer.pch
+//  MusicPlayer
+//
+//  Created by Y Liu on 15/12/20.
+//  Copyright © 2015年 CoderYLiu. All rights reserved.
+//
+
+#ifndef MusicPlayer_pch
+#define MusicPlayer_pch
+
+#import "UIView+Extension.h"
+
+#endif /* MusicPlayer_pch */

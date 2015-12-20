@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD9B444A1C26AB75004AB2AE /* LYMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44491C26AB75004AB2AE /* LYMusicModel.m */; };
+		CD9B444D1C26AC3B004AB2AE /* LYMusicDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B444C1C26AC3B004AB2AE /* LYMusicDataTool.m */; };
+		CD9B44661C26ACEC004AB2AE /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44501C26ACEC004AB2AE /* MJDictionaryCache.m */; };
+		CD9B44671C26ACEC004AB2AE /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44531C26ACEC004AB2AE /* MJExtensionConst.m */; };
+		CD9B44681C26ACEC004AB2AE /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44551C26ACEC004AB2AE /* MJFoundation.m */; };
+		CD9B44691C26ACEC004AB2AE /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44571C26ACEC004AB2AE /* MJProperty.m */; };
+		CD9B446A1C26ACEC004AB2AE /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44591C26ACEC004AB2AE /* MJPropertyKey.m */; };
+		CD9B446B1C26ACEC004AB2AE /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B445B1C26ACEC004AB2AE /* MJPropertyType.m */; };
+		CD9B446C1C26ACEC004AB2AE /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B445D1C26ACEC004AB2AE /* NSObject+MJClass.m */; };
+		CD9B446D1C26ACEC004AB2AE /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B445F1C26ACEC004AB2AE /* NSObject+MJCoding.m */; };
+		CD9B446E1C26ACEC004AB2AE /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44611C26ACEC004AB2AE /* NSObject+MJKeyValue.m */; };
+		CD9B446F1C26ACEC004AB2AE /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44631C26ACEC004AB2AE /* NSObject+MJProperty.m */; };
+		CD9B44701C26ACEC004AB2AE /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44651C26ACEC004AB2AE /* NSString+MJExtension.m */; };
+		CDA052D71C26DBDF0041499B /* LYMusicListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA052D51C26DBDF0041499B /* LYMusicListCell.m */; };
+		CDA052D81C26DBDF0041499B /* LYMusicListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA052D61C26DBDF0041499B /* LYMusicListCell.xib */; };
+		CDA052DB1C26E2ED0041499B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA052DA1C26E2ED0041499B /* UIView+Extension.m */; };
 		CDADCA891C2522A200F4AFC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDADCA871C2522A200F4AFC2 /* Main.storyboard */; };
 		CDADCA8B1C2522A200F4AFC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDADCA8A1C2522A200F4AFC2 /* Assets.xcassets */; };
 		CDADCA8E1C2522A200F4AFC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDADCA8C1C2522A200F4AFC2 /* LaunchScreen.storyboard */; };
@@ -78,6 +94,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD9B44481C26AB75004AB2AE /* LYMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMusicModel.h; sourceTree = "<group>"; };
+		CD9B44491C26AB75004AB2AE /* LYMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMusicModel.m; sourceTree = "<group>"; };
+		CD9B444B1C26AC3B004AB2AE /* LYMusicDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMusicDataTool.h; sourceTree = "<group>"; };
+		CD9B444C1C26AC3B004AB2AE /* LYMusicDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMusicDataTool.m; sourceTree = "<group>"; };
+		CD9B444F1C26ACEC004AB2AE /* MJDictionaryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDictionaryCache.h; sourceTree = "<group>"; };
+		CD9B44501C26ACEC004AB2AE /* MJDictionaryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDictionaryCache.m; sourceTree = "<group>"; };
+		CD9B44511C26ACEC004AB2AE /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		CD9B44521C26ACEC004AB2AE /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		CD9B44531C26ACEC004AB2AE /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		CD9B44541C26ACEC004AB2AE /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		CD9B44551C26ACEC004AB2AE /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		CD9B44561C26ACEC004AB2AE /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		CD9B44571C26ACEC004AB2AE /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		CD9B44581C26ACEC004AB2AE /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		CD9B44591C26ACEC004AB2AE /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		CD9B445A1C26ACEC004AB2AE /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		CD9B445B1C26ACEC004AB2AE /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		CD9B445C1C26ACEC004AB2AE /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		CD9B445D1C26ACEC004AB2AE /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		CD9B445E1C26ACEC004AB2AE /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		CD9B445F1C26ACEC004AB2AE /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		CD9B44601C26ACEC004AB2AE /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		CD9B44611C26ACEC004AB2AE /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		CD9B44621C26ACEC004AB2AE /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		CD9B44631C26ACEC004AB2AE /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		CD9B44641C26ACEC004AB2AE /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		CD9B44651C26ACEC004AB2AE /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		CDA052D41C26DBDF0041499B /* LYMusicListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMusicListCell.h; sourceTree = "<group>"; };
+		CDA052D51C26DBDF0041499B /* LYMusicListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMusicListCell.m; sourceTree = "<group>"; };
+		CDA052D61C26DBDF0041499B /* LYMusicListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYMusicListCell.xib; sourceTree = "<group>"; };
+		CDA052D91C26E2ED0041499B /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		CDA052DA1C26E2ED0041499B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		CDA052DC1C26E44E0041499B /* MusicPlayer.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPlayer.pch; sourceTree = "<group>"; };
 		CDADCA7B1C2522A200F4AFC2 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDADCA881C2522A200F4AFC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDADCA8A1C2522A200F4AFC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +213,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD9B444E1C26ACEC004AB2AE /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				CD9B444F1C26ACEC004AB2AE /* MJDictionaryCache.h */,
+				CD9B44501C26ACEC004AB2AE /* MJDictionaryCache.m */,
+				CD9B44511C26ACEC004AB2AE /* MJExtension.h */,
+				CD9B44521C26ACEC004AB2AE /* MJExtensionConst.h */,
+				CD9B44531C26ACEC004AB2AE /* MJExtensionConst.m */,
+				CD9B44541C26ACEC004AB2AE /* MJFoundation.h */,
+				CD9B44551C26ACEC004AB2AE /* MJFoundation.m */,
+				CD9B44561C26ACEC004AB2AE /* MJProperty.h */,
+				CD9B44571C26ACEC004AB2AE /* MJProperty.m */,
+				CD9B44581C26ACEC004AB2AE /* MJPropertyKey.h */,
+				CD9B44591C26ACEC004AB2AE /* MJPropertyKey.m */,
+				CD9B445A1C26ACEC004AB2AE /* MJPropertyType.h */,
+				CD9B445B1C26ACEC004AB2AE /* MJPropertyType.m */,
+				CD9B445C1C26ACEC004AB2AE /* NSObject+MJClass.h */,
+				CD9B445D1C26ACEC004AB2AE /* NSObject+MJClass.m */,
+				CD9B445E1C26ACEC004AB2AE /* NSObject+MJCoding.h */,
+				CD9B445F1C26ACEC004AB2AE /* NSObject+MJCoding.m */,
+				CD9B44601C26ACEC004AB2AE /* NSObject+MJKeyValue.h */,
+				CD9B44611C26ACEC004AB2AE /* NSObject+MJKeyValue.m */,
+				CD9B44621C26ACEC004AB2AE /* NSObject+MJProperty.h */,
+				CD9B44631C26ACEC004AB2AE /* NSObject+MJProperty.m */,
+				CD9B44641C26ACEC004AB2AE /* NSString+MJExtension.h */,
+				CD9B44651C26ACEC004AB2AE /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
 		CDADCA721C2522A200F4AFC2 = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +366,8 @@
 		CDADCAB81C25237800F4AFC2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CD9B44481C26AB75004AB2AE /* LYMusicModel.h */,
+				CD9B44491C26AB75004AB2AE /* LYMusicModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +375,9 @@
 		CDADCAB91C25237800F4AFC2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CDA052D41C26DBDF0041499B /* LYMusicListCell.h */,
+				CDA052D51C26DBDF0041499B /* LYMusicListCell.m */,
+				CDA052D61C26DBDF0041499B /* LYMusicListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,6 +397,8 @@
 		CDADCABB1C25237800F4AFC2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				CDA052D91C26E2ED0041499B /* UIView+Extension.h */,
+				CDA052DA1C26E2ED0041499B /* UIView+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -320,6 +406,8 @@
 		CDADCABC1C25237800F4AFC2 /* DataTool */ = {
 			isa = PBXGroup;
 			children = (
+				CD9B444B1C26AC3B004AB2AE /* LYMusicDataTool.h */,
+				CD9B444C1C26AC3B004AB2AE /* LYMusicDataTool.m */,
 			);
 			path = DataTool;
 			sourceTree = "<group>";
@@ -327,6 +415,7 @@
 		CDADCABD1C25237800F4AFC2 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				CD9B444E1C26ACEC004AB2AE /* MJExtension */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -338,6 +427,7 @@
 				CDADCAC01C25237800F4AFC2 /* AppDelegate.m */,
 				CDADCAC11C25237800F4AFC2 /* Info.plist */,
 				CDADCAC21C25237800F4AFC2 /* main.m */,
+				CDA052DC1C26E44E0041499B /* MusicPlayer.pch */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -550,6 +640,7 @@
 				CDADCB0B1C25262B00F4AFC2 /* nanquan@2x.jpg in Resources */,
 				CDADCB011C25262B00F4AFC2 /* eason@2x.jpg in Resources */,
 				CDADCB101C25262B00F4AFC2 /* zxy_icon@2x.jpg in Resources */,
+				CDA052D81C26DBDF0041499B /* LYMusicListCell.xib in Resources */,
 				CDADCA8B1C2522A200F4AFC2 /* Assets.xcassets in Resources */,
 				CDADCB1D1C25262B00F4AFC2 /* 1201111234.mp3 in Resources */,
 				CDADCA891C2522A200F4AFC2 /* Main.storyboard in Resources */,
@@ -597,10 +688,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9B446D1C26ACEC004AB2AE /* NSObject+MJCoding.m in Sources */,
+				CD9B44671C26ACEC004AB2AE /* MJExtensionConst.m in Sources */,
+				CD9B446C1C26ACEC004AB2AE /* NSObject+MJClass.m in Sources */,
+				CD9B446A1C26ACEC004AB2AE /* MJPropertyKey.m in Sources */,
 				CDADCAC61C25237800F4AFC2 /* main.m in Sources */,
 				CDADCAC41C25237800F4AFC2 /* AppDelegate.m in Sources */,
+				CDA052DB1C26E2ED0041499B /* UIView+Extension.m in Sources */,
+				CDA052D71C26DBDF0041499B /* LYMusicListCell.m in Sources */,
+				CD9B44691C26ACEC004AB2AE /* MJProperty.m in Sources */,
+				CD9B44681C26ACEC004AB2AE /* MJFoundation.m in Sources */,
+				CD9B44661C26ACEC004AB2AE /* MJDictionaryCache.m in Sources */,
+				CD9B444D1C26AC3B004AB2AE /* LYMusicDataTool.m in Sources */,
+				CD9B444A1C26AB75004AB2AE /* LYMusicModel.m in Sources */,
+				CD9B446B1C26ACEC004AB2AE /* MJPropertyType.m in Sources */,
 				CDADCACF1C2524E000F4AFC2 /* LYListTableViewController.m in Sources */,
+				CD9B446E1C26ACEC004AB2AE /* NSObject+MJKeyValue.m in Sources */,
+				CD9B44701C26ACEC004AB2AE /* NSString+MJExtension.m in Sources */,
 				CDADCACC1C2524BF00F4AFC2 /* LYDetailViewController.m in Sources */,
+				CD9B446F1C26ACEC004AB2AE /* NSObject+MJProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,6 +846,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)//MusicPlayer/Classes/Other/System/MusicPlayer.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MusicPlayer/Classes/Other/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoderYLiu.MusicPlayer;
@@ -752,6 +860,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)//MusicPlayer/Classes/Other/System/MusicPlayer.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MusicPlayer/Classes/Other/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoderYLiu.MusicPlayer;
@@ -826,6 +936,7 @@
 				CDADCAAA1C2522A300F4AFC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDADCAAB1C2522A300F4AFC2 /* Build configuration list for PBXNativeTarget "MusicPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -834,6 +945,7 @@
 				CDADCAAD1C2522A300F4AFC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDADCAAE1C2522A300F4AFC2 /* Build configuration list for PBXNativeTarget "MusicPlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -842,6 +954,7 @@
 				CDADCAB01C2522A300F4AFC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
