@@ -123,11 +123,12 @@
 {
     // 取出数据模型
     LYMusicModel *musicModel = self.musicModels[indexPath.row];
-    // TODO 播放音乐, 跳转页面
-    NSLog(@"播放音乐---%@", musicModel.name);
     
     // 播放音乐
     [[LYMusicOperationTool shareLYMusicOperationTool] playMusicWithMusicModel:musicModel];
+    
+    // 跳转到详情界面
+    [self performSegueWithIdentifier:@"list2Detail" sender:nil];
     
 }
 
