@@ -7,6 +7,10 @@
 //
 
 #import "LYDetailViewController.h"
+#import "LYMusicOperationTool.h"
+#import "LYMusicMessageModel.h"
+#import "LYMusicModel.h"
+#import "LYTimeTool.h"
 
 @interface LYDetailViewController ()
 
@@ -65,6 +69,86 @@
     
     // 初始化设置
     [self setUpInit];
+}
+
+/**
+ *  当本控制器不显示时, 可以移除timer, 节省资源
+ */
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setUpOnce];
+}
+
+/******************以下方法, 都是业务逻辑方法, 需要跟外界进行交互, 所以放在比较容易被看到的地方**********************/
+
+#pragma mark - Event
+/**
+ *  关闭控制器
+ */
+- (IBAction)close {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+/**
+ *  更多按钮
+ */
+- (IBAction)more
+{
+    NSLog(@"更多");
+}
+
+/**
+ *  播放或者暂停(上一首, 下一首, 播放/暂停这些功能实现, 统一由LYMusicOperationTool工具类提供, 此控制器内部, 只负责业务逻辑调度)
+ */
+- (IBAction)playOrPause:(UIButton *)sender {
+    // 更改按钮的播放状态
+    sender.selected = !sender.selected;
+    
+    if (sender.selected) {
+        [[LYMusicOperationTool shareLYMusicOperationTool] playCurrentMusic];
+    } else {
+        [[LYMusicOperationTool shareLYMusicOperationTool] pauseCurrentMusic];
+    }
+}
+
+/**
+ *  上一首
+ */
+- (IBAction)preMusic {
+    [[LYMusicOperationTool shareLYMusicOperationTool] preMusic];
+    [self setUpOnce];
+}
+
+/**
+ *  下一首
+ */
+- (IBAction)nextMusic {
+    [[LYMusicOperationTool shareLYMusicOperationTool] nextMusic];
+    [self setUpOnce];
+}
+
+
+/************************初始化设置, 以下方法不涉及业务逻辑, 写一次基本上就不用了**********************************/
+#pragma mark - setUpOnce
+
+/**
+ *  歌曲切换时, 更新一次的情况
+ */
+- (void)setUpOnce
+{
+    // 获取工具类提供的播放音乐信息的数据模型(由工具类统一提供, 此处不需要关心如何获取, 只负责展示)
+    LYMusicMessageModel *messageModel = [LYMusicOperationTool shareLYMusicOperationTool].messageModel;
+    
+    self.backImageView.image = [UIImage imageNamed:messageModel.musicModel.icon];
+    self.iconImageView.image = [UIImage imageNamed:messageModel.musicModel.icon];
+    
+    // 歌曲
+    self.songNameLabel.text = messageModel.musicModel.name;
+    // 演唱者
+    self.singerNameLabel.text = messageModel.musicModel.singer;
+    // 播放总时长
+    self.totalTimeLabel.text = [LYTimeTool getFormatTimeWithTimeInterval:messageModel.totalTime];
 }
 
 #pragma mark - 初始化设置

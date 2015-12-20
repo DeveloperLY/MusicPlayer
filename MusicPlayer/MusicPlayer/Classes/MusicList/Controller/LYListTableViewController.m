@@ -81,6 +81,9 @@
 {
     [LYMusicDataTool loadMusicData:^(NSArray<LYMusicModel *> *musicModels) {
         self.musicModels = musicModels;
+        
+        // 给专门负责播放业务逻辑的工具类, 赋值, 告诉它, 需要播放的数据列表
+        [LYMusicOperationTool shareLYMusicOperationTool].musicModels = musicModels;
     }];
 }
 

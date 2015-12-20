@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD987D031C271250007D22E7 /* LYMusicMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD987D021C271250007D22E7 /* LYMusicMessageModel.m */; };
+		CD987D061C271977007D22E7 /* LYTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CD987D051C271977007D22E7 /* LYTimeTool.m */; };
 		CD9B444A1C26AB75004AB2AE /* LYMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44491C26AB75004AB2AE /* LYMusicModel.m */; };
 		CD9B444D1C26AC3B004AB2AE /* LYMusicDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B444C1C26AC3B004AB2AE /* LYMusicDataTool.m */; };
 		CD9B44661C26ACEC004AB2AE /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44501C26ACEC004AB2AE /* MJDictionaryCache.m */; };
@@ -96,6 +98,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD987D011C271250007D22E7 /* LYMusicMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMusicMessageModel.h; sourceTree = "<group>"; };
+		CD987D021C271250007D22E7 /* LYMusicMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMusicMessageModel.m; sourceTree = "<group>"; };
+		CD987D041C271977007D22E7 /* LYTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTimeTool.h; sourceTree = "<group>"; };
+		CD987D051C271977007D22E7 /* LYTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTimeTool.m; sourceTree = "<group>"; };
 		CD9B44481C26AB75004AB2AE /* LYMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMusicModel.h; sourceTree = "<group>"; };
 		CD9B44491C26AB75004AB2AE /* LYMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMusicModel.m; sourceTree = "<group>"; };
 		CD9B444B1C26AC3B004AB2AE /* LYMusicDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMusicDataTool.h; sourceTree = "<group>"; };
@@ -340,6 +346,8 @@
 		CDADCAB41C25237800F4AFC2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CD987D011C271250007D22E7 /* LYMusicMessageModel.h */,
+				CD987D021C271250007D22E7 /* LYMusicMessageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -447,6 +455,8 @@
 				CDA052DE1C26EB650041499B /* LYAudioTool.m */,
 				CDA052E01C26EE0A0041499B /* LYMusicOperationTool.h */,
 				CDA052E11C26EE0A0041499B /* LYMusicOperationTool.m */,
+				CD987D041C271977007D22E7 /* LYTimeTool.h */,
+				CD987D051C271977007D22E7 /* LYTimeTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -714,12 +724,14 @@
 				CD9B44661C26ACEC004AB2AE /* MJDictionaryCache.m in Sources */,
 				CD9B444D1C26AC3B004AB2AE /* LYMusicDataTool.m in Sources */,
 				CD9B444A1C26AB75004AB2AE /* LYMusicModel.m in Sources */,
+				CD987D061C271977007D22E7 /* LYTimeTool.m in Sources */,
 				CD9B446B1C26ACEC004AB2AE /* MJPropertyType.m in Sources */,
 				CDADCACF1C2524E000F4AFC2 /* LYListTableViewController.m in Sources */,
 				CDA052E21C26EE0A0041499B /* LYMusicOperationTool.m in Sources */,
 				CD9B446E1C26ACEC004AB2AE /* NSObject+MJKeyValue.m in Sources */,
 				CD9B44701C26ACEC004AB2AE /* NSString+MJExtension.m in Sources */,
 				CDADCACC1C2524BF00F4AFC2 /* LYDetailViewController.m in Sources */,
+				CD987D031C271250007D22E7 /* LYMusicMessageModel.m in Sources */,
 				CD9B446F1C26ACEC004AB2AE /* NSObject+MJProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

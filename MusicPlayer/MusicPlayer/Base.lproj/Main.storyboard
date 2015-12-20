@@ -77,10 +77,16 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3L-Ln-FVJ" userLabel="更多">
                                                     <rect key="frame" x="547" y="30" width="45" height="45"/>
                                                     <state key="normal" image="main_tab_more"/>
+                                                    <connections>
+                                                        <action selector="more" destination="kPg-7b-VWZ" eventType="touchUpInside" id="A6r-JD-5wG"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odB-o6-izC" userLabel="退出">
                                                     <rect key="frame" x="8" y="30" width="40" height="40"/>
                                                     <state key="normal" image="miniplayer_btn_playlist_close"/>
+                                                    <connections>
+                                                        <action selector="close" destination="kPg-7b-VWZ" eventType="touchUpInside" id="bwf-Ox-M5l"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -112,14 +118,23 @@
                                                     </constraints>
                                                     <state key="normal" image="player_btn_play_normal"/>
                                                     <state key="selected" image="player_btn_pause_normal"/>
+                                                    <connections>
+                                                        <action selector="playOrPause:" destination="kPg-7b-VWZ" eventType="touchUpInside" id="d6n-3U-v1S"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3p-4T-7mm" userLabel="上一首">
                                                     <rect key="frame" x="154" y="46" width="64" height="64"/>
                                                     <state key="normal" image="player_btn_pre_normal"/>
+                                                    <connections>
+                                                        <action selector="preMusic" destination="kPg-7b-VWZ" eventType="touchUpInside" id="lM3-Sa-7uX"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqi-ZG-DLk" userLabel="下一首">
                                                     <rect key="frame" x="382" y="46" width="64" height="64"/>
                                                     <state key="normal" image="player_btn_next_normal"/>
+                                                    <connections>
+                                                        <action selector="nextMusic" destination="kPg-7b-VWZ" eventType="touchUpInside" id="1gK-FD-KU8"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPJ-6q-Ztl" userLabel="播放时间">
                                                     <rect key="frame" x="10" y="8" width="37" height="15"/>
@@ -262,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewu-9v-Hd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="411" y="217"/>
+            <point key="canvasLocation" x="626" y="217"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MCe-20-68Z">

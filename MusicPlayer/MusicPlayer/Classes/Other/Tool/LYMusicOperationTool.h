@@ -12,9 +12,15 @@
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
 
-@class LYMusicModel;
+@class LYMusicModel, LYMusicMessageModel;
 
 @interface LYMusicOperationTool : NSObject
+
+/** 存放的播放列表 */
+@property (nonatomic, strong) NSArray <LYMusicModel *> *musicModels;
+
+/** 歌曲信息数据模型 */
+@property (nonatomic, strong) LYMusicMessageModel *messageModel;
 
 interfaceSingleton(LYMusicOperationTool);
 
@@ -24,5 +30,25 @@ interfaceSingleton(LYMusicOperationTool);
  *  @param musicModel 音乐数据模型
  */
 - (void)playMusicWithMusicModel:(LYMusicModel *)musicModel;
+
+/**
+ *  暂停当前正在播放的音乐
+ */
+- (void)pauseCurrentMusic;
+
+/**
+ *  继续播放当前音乐
+ */
+- (void)playCurrentMusic;
+
+/**
+ *  播放下一首
+ */
+- (void)nextMusic;
+
+/**
+ *  上一首
+ */
+- (void)preMusic;
 
 @end
