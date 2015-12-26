@@ -20,6 +20,6 @@
 @property (nonatomic ,assign) NSTimeInterval endTime;
 
 /** 歌词内容 */
-@property (nonatomic, copy) NSString *lrcText;
+@property (nonatomic ,copy) NSString *lrcText;
 
 @end

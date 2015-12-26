@@ -74,6 +74,31 @@
     return lrcModels;
 }
 
-
+/**
+ *  根据当前时间何歌词数据模型组成的数据, 获取对应的应该播放的歌词数据模型
+ *
+ *  @param currentTime 当前时间
+ *  @param lrcModels   歌词数据模型数组
+ *
+ *  @return 索引
+ */
++ (NSInteger)getRowWithCurrentTime:(NSTimeInterval)currentTime lrcModels:(NSArray<LYLrcModel *> *)lrcModels
+{
+    // 遍历每一个歌词数据模型, 如果发现当歌曲播放时间 大于歌词的开始时间, 并且小于歌词的结束时间, 就返回
+    NSInteger i = 0;
+    NSInteger count = lrcModels.count;
+    for (NSInteger i = 0; i < count; i ++) {
+        LYLrcModel *lrcModel = lrcModels[i];
+        if (currentTime >= lrcModel.beginTime && currentTime < lrcModel.endTime) {
+            return i;
+        }
+    }
+    
+    // 如果都没查找到, 并且是存在时间, 是当做最后一行处理, 防止跳回到第一行
+    if (i > 0 && currentTime > 0) {
+        return count - 1;
+    }
+    return 0;
+}
 
 @end

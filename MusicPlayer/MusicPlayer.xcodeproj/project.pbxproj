@@ -26,6 +26,9 @@
 		CD9C7DAC1C2EECA2009C5E0A /* LYLrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DAB1C2EECA2009C5E0A /* LYLrcViewController.m */; };
 		CD9C7DAF1C2EF010009C5E0A /* LYLrcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DAE1C2EF010009C5E0A /* LYLrcModel.m */; };
 		CD9C7DB21C2EF03C009C5E0A /* LYLrcDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DB11C2EF03C009C5E0A /* LYLrcDataTool.m */; };
+		CD9C7DB51C2EFDC4009C5E0A /* LYLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DB41C2EFDC4009C5E0A /* LYLrcLabel.m */; };
+		CD9C7DB91C2F0141009C5E0A /* LYLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DB71C2F0141009C5E0A /* LYLrcCell.m */; };
+		CD9C7DBA1C2F0141009C5E0A /* LYLrcCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9C7DB81C2F0141009C5E0A /* LYLrcCell.xib */; };
 		CDA052D71C26DBDF0041499B /* LYMusicListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA052D51C26DBDF0041499B /* LYMusicListCell.m */; };
 		CDA052D81C26DBDF0041499B /* LYMusicListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA052D61C26DBDF0041499B /* LYMusicListCell.xib */; };
 		CDA052DB1C26E2ED0041499B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA052DA1C26E2ED0041499B /* UIView+Extension.m */; };
@@ -141,6 +144,11 @@
 		CD9C7DAE1C2EF010009C5E0A /* LYLrcModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLrcModel.m; sourceTree = "<group>"; };
 		CD9C7DB01C2EF03C009C5E0A /* LYLrcDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLrcDataTool.h; sourceTree = "<group>"; };
 		CD9C7DB11C2EF03C009C5E0A /* LYLrcDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLrcDataTool.m; sourceTree = "<group>"; };
+		CD9C7DB31C2EFDC4009C5E0A /* LYLrcLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLrcLabel.h; sourceTree = "<group>"; };
+		CD9C7DB41C2EFDC4009C5E0A /* LYLrcLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLrcLabel.m; sourceTree = "<group>"; };
+		CD9C7DB61C2F0141009C5E0A /* LYLrcCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLrcCell.h; sourceTree = "<group>"; };
+		CD9C7DB71C2F0141009C5E0A /* LYLrcCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLrcCell.m; sourceTree = "<group>"; };
+		CD9C7DB81C2F0141009C5E0A /* LYLrcCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYLrcCell.xib; sourceTree = "<group>"; };
 		CDA052D41C26DBDF0041499B /* LYMusicListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMusicListCell.h; sourceTree = "<group>"; };
 		CDA052D51C26DBDF0041499B /* LYMusicListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMusicListCell.m; sourceTree = "<group>"; };
 		CDA052D61C26DBDF0041499B /* LYMusicListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYMusicListCell.xib; sourceTree = "<group>"; };
@@ -371,6 +379,11 @@
 		CDADCAB51C25237800F4AFC2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CD9C7DB31C2EFDC4009C5E0A /* LYLrcLabel.h */,
+				CD9C7DB41C2EFDC4009C5E0A /* LYLrcLabel.m */,
+				CD9C7DB61C2F0141009C5E0A /* LYLrcCell.h */,
+				CD9C7DB71C2F0141009C5E0A /* LYLrcCell.m */,
+				CD9C7DB81C2F0141009C5E0A /* LYLrcCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -703,6 +716,7 @@
 				CDADCB031C25262B00F4AFC2 /* jay@2x.jpg in Resources */,
 				CDADCB231C25262B00F4AFC2 /* 309769.mp3 in Resources */,
 				CDADCB0F1C25262B00F4AFC2 /* zxy@2x.jpg in Resources */,
+				CD9C7DBA1C2F0141009C5E0A /* LYLrcCell.xib in Resources */,
 				CDADCB1A1C25262B00F4AFC2 /* 月半小夜曲.lrc in Resources */,
 				CDADCAFF1C25262B00F4AFC2 /* dzq@2x.jpg in Resources */,
 				CDADCB001C25262B00F4AFC2 /* dzq_icon@2x.jpg in Resources */,
@@ -738,6 +752,7 @@
 				CD9B446A1C26ACEC004AB2AE /* MJPropertyKey.m in Sources */,
 				CDADCAC61C25237800F4AFC2 /* main.m in Sources */,
 				CDADCAC41C25237800F4AFC2 /* AppDelegate.m in Sources */,
+				CD9C7DB91C2F0141009C5E0A /* LYLrcCell.m in Sources */,
 				CDA052DB1C26E2ED0041499B /* UIView+Extension.m in Sources */,
 				CDA052D71C26DBDF0041499B /* LYMusicListCell.m in Sources */,
 				CD9B44691C26ACEC004AB2AE /* MJProperty.m in Sources */,
@@ -751,6 +766,7 @@
 				CDA052E21C26EE0A0041499B /* LYMusicOperationTool.m in Sources */,
 				CD9B446E1C26ACEC004AB2AE /* NSObject+MJKeyValue.m in Sources */,
 				CD9C7DA91C2EDC78009C5E0A /* CALayer+PauseAimate.m in Sources */,
+				CD9C7DB51C2EFDC4009C5E0A /* LYLrcLabel.m in Sources */,
 				CD9C7DAC1C2EECA2009C5E0A /* LYLrcViewController.m in Sources */,
 				CD9B44701C26ACEC004AB2AE /* NSString+MJExtension.m in Sources */,
 				CDADCACC1C2524BF00F4AFC2 /* LYDetailViewController.m in Sources */,

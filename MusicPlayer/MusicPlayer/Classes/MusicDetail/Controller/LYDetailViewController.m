@@ -14,8 +14,10 @@
 #import "CALayer+PauseAimate.h"
 #import "LYLrcViewController.h"
 #import "LYLrcDataTool.h"
+#import "LYLrcModel.h"
+#import "LYLrcLabel.h"
 
-@interface LYDetailViewController ()
+@interface LYDetailViewController () <UIScrollViewDelegate>
 
 /** 歌词的占位背景视图 */
 @property (weak, nonatomic) IBOutlet UIScrollView *lrcBackView;
@@ -42,7 +44,7 @@
 /**********************多次*******************/
 
 /** 播放的歌词 */
-@property (weak, nonatomic) IBOutlet UILabel *lrcLabel;
+@property (weak, nonatomic) IBOutlet LYLrcLabel *lrcLabel;
 
 /** 歌曲已经播放的时长 */
 @property (weak, nonatomic) IBOutlet UILabel *costTimeLabel;
@@ -61,6 +63,9 @@
 
 /** 用来刷新界面的timer */
 @property (nonatomic, strong) NSTimer *updateTimer;
+
+/** 负责更新歌词的定时器 */
+@property (nonatomic, strong) CADisplayLink *updateLrcLink;
 
 
 @end
@@ -83,6 +88,7 @@
     
     [self setUpOnce];
     [self updateTimer];
+    [self updateLrcLink];
 }
 
 /**
@@ -94,6 +100,9 @@
     
     [self.updateTimer invalidate];
     self.updateTimer = nil;
+    
+    [self.updateLrcLink invalidate];
+    self.updateLrcLink = nil;
 }
 
 /******************以下方法, 都是业务逻辑方法, 需要跟外界进行交互, 所以放在比较容易被看到的地方**********************/
@@ -246,10 +255,10 @@
         [self pauseRotation];
     }
     
-    // 加载歌词数据
+    // 加载歌曲对应的歌词资源
     NSArray *lrcModels = [LYLrcDataTool getLrcModelsWithFileName:messageModel.musicModel.lrcname];
     
-    //
+    // 给负责展示歌词的控制器赋值, 具体展示由歌词展示控制器负责, 此处只负责传值
     self.lrcViewController.lrcModels = lrcModels;
 }
 
@@ -270,6 +279,45 @@
     self.progressSlider.value = messageModel.costTime / messageModel.totalTime;
     
     self.playOrPauseBtn.selected = messageModel.isPlaying;
+}
+
+#pragma mark - updateLrc
+- (void)updateLrc
+{
+    // 获取歌曲播放信息的数据模型
+    LYMusicMessageModel *messageModel = [LYMusicOperationTool shareLYMusicOperationTool].messageModel;
+    
+    // 计算当前播放时间, 对应的歌曲行号
+    NSInteger row = [LYLrcDataTool getRowWithCurrentTime:messageModel.costTime lrcModels:self.lrcViewController.lrcModels];
+    
+    // 把需要滚动的行号, 交给歌词控制器统一管理, 让歌词控制器负责滚动
+    self.lrcViewController.scrollRow = row;
+    
+    // 显示歌词label
+    // 取出当前正在播放的歌词数据模型
+    LYLrcModel *lrcModel = self.lrcViewController.lrcModels[row];
+    self.lrcLabel.text = lrcModel.lrcText;
+    
+    // 计算一行歌词的播放进度
+    self.lrcLabel.progress = (messageModel.costTime - lrcModel.beginTime) / (lrcModel.endTime - lrcModel.beginTime);
+    
+    // 传值给歌词控制器, 让歌词控制器的歌词负责进度展示
+    self.lrcViewController.progress = self.lrcLabel.progress;
+    
+}
+
+#pragma mark - UIScrollViewDelegate
+/**
+ *  在这个方法里面, 做一些动画效果
+ */
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    // 获取当前滚动的范围
+    CGFloat scale = 1 - scrollView.contentOffset.x / scrollView.width;
+    
+    // 设置需要透明度调整的控件
+    self.lrcLabel.alpha = scale;
+    self.iconImageView.alpha = scale;
 }
 
 
@@ -381,6 +429,20 @@
         _lrcViewController = lrcViewController;
     }
     return _lrcViewController;
+}
+
+/**
+ *  负责更新歌词的时钟
+ *
+ *  @return updateLrcLink
+ */
+- (CADisplayLink *)updateLrcLink
+{
+    if (!_updateLrcLink) {
+        _updateLrcLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateLrc)];
+        [_updateLrcLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    }
+    return _updateLrcLink;
 }
 
 @end

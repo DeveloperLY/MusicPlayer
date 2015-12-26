@@ -215,7 +215,7 @@
                                                         <constraint firstAttribute="width" secondItem="O3f-qi-gmd" secondAttribute="height" multiplier="1:1" id="ZQp-0L-jjP"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歌词" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbH-4h-mS4" userLabel="歌词">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歌词" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbH-4h-mS4" userLabel="歌词" customClass="LYLrcLabel">
                                                     <rect key="frame" x="283" y="337" width="34" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -223,6 +223,9 @@
                                                 </label>
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqe-9d-pqJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="372"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="kPg-7b-VWZ" id="hNu-gH-VeY"/>
+                                                    </connections>
                                                 </scrollView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

@@ -8,6 +8,7 @@
 
 #import "LYLrcViewController.h"
 #import "LYLrcModel.h"
+#import "LYLrcCell.h"
 
 @interface LYLrcViewController ()
 
@@ -43,6 +44,23 @@
 }
 
 /**
+ *  重写歌词进度的set方法, 在此方法中, 设置歌词进度
+ */
+- (void)setProgress:(CGFloat)progress
+{
+    _progress = progress;
+    
+    // 获取当前的行号
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.scrollRow inSection:0];
+    
+    // 取出对应的cell
+    LYLrcCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    // 设置进度
+    cell.progress = progress;
+}
+
+/**
  *  重写歌词数据源的set方法, 在这个方法里面刷新表格
  *
  *  @param lrcModels 数据源
@@ -53,6 +71,29 @@
     [self.tableView reloadData];
 }
 
+/**
+ *  重写需要滚动行的set方法, 在此方法里面滚动到对应的行
+ *
+ *  @param scrollRow 需要滚动的行号
+ */
+- (void)setScrollRow:(NSInteger)scrollRow
+{
+    // 通过这个判断, 过滤同一行的频繁刷新
+    if (_scrollRow == scrollRow) {
+        return;
+    }
+    _scrollRow = scrollRow;
+    
+    // 获取需要滚动的IndexPath
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_scrollRow inSection:0];
+    
+    // 刷新表格
+    [self.tableView reloadRowsAtIndexPaths:[self.tableView indexPathsForVisibleRows] withRowAnimation:UITableViewRowAnimationFade];
+    
+    // 滚动到对应行
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+}
+
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -61,20 +102,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellID = @"LRC";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        cell.textLabel.textAlignment = NSTextAlignmentCenter;
-        cell.backgroundColor = [UIColor clearColor];
-        cell.textLabel.textColor = [UIColor whiteColor];
-    }
+    // 快速创建歌词cell
+    LYLrcCell *cell = [LYLrcCell cellWithTableView:tableView];
     
     // 取出数据模型
     LYLrcModel *lrcModel = self.lrcModels[indexPath.row];
     
     // 赋值
-    cell.textLabel.text = lrcModel.lrcText;
+    cell.lrcText = lrcModel.lrcText;
+    
+    // 更新进度
+    if (indexPath.row == self.scrollRow) {
+        cell.progress = self.progress;
+    } else {
+        cell.progress = 0;
+    }
     
     return cell;
 }
