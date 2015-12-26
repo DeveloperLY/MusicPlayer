@@ -73,12 +73,25 @@
 }
 
 /**
- *  当本控制器不显示时, 可以移除timer, 节省资源
+ *  当本控制器显示时, 再把timer添加进来
  */
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     [self setUpOnce];
+    [self updateTimer];
+}
+
+/**
+ *  当本控制器不显示时, 可以移除timer, 节省资源
+ */
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.updateTimer invalidate];
+    self.updateTimer = nil;
 }
 
 /******************以下方法, 都是业务逻辑方法, 需要跟外界进行交互, 所以放在比较容易被看到的地方**********************/
@@ -133,6 +146,7 @@
 
 
 /************************初始化设置, 以下方法不涉及业务逻辑, 写一次基本上就不用了**********************************/
+
 #pragma mark - setUpOnce
 
 /**
@@ -162,6 +176,26 @@
         [self pauseRotation];
     }
 }
+
+#pragma mark - setUpTimes
+
+/**
+ *  歌曲切换时, 更新多次的情况
+ */
+- (void)setUpTimes
+{
+    // 获取歌曲播放信息的数据模型
+    LYMusicMessageModel *messageModel = [LYMusicOperationTool shareLYMusicOperationTool].messageModel;
+    
+    // 已经播放的时间
+    self.costTimeLabel.text = [LYTimeTool getFormatTimeWithTimeInterval:messageModel.costTime];
+    
+    // 播放进度
+    self.progressSlider.value = messageModel.costTime / messageModel.totalTime;
+    
+    self.playOrPauseBtn.selected = messageModel.isPlaying;
+}
+
 
 #pragma mark - 初始化设置
 - (void)setUpInit
@@ -244,6 +278,23 @@
     self.iconImageView.layer.borderColor = [UIColor colorWithRed:36/255.0 green:36/255.0 blue:36/255.0 alpha:1.0].CGColor;
     
 }
+
+#pragma mark - lazy loading
+
+/**
+ *  负责更新进度等信息的timer
+ *
+ *  @return timer
+ */
+- (NSTimer *)updateTimer
+{
+    if (!_updateTimer) {
+        _updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(setUpTimes) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:_updateTimer forMode:NSRunLoopCommonModes];
+    }
+    return _updateTimer;
+}
+
 
 
 @end
