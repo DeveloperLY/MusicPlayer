@@ -22,6 +22,7 @@
 		CD9B446E1C26ACEC004AB2AE /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44611C26ACEC004AB2AE /* NSObject+MJKeyValue.m */; };
 		CD9B446F1C26ACEC004AB2AE /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44631C26ACEC004AB2AE /* NSObject+MJProperty.m */; };
 		CD9B44701C26ACEC004AB2AE /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44651C26ACEC004AB2AE /* NSString+MJExtension.m */; };
+		CD9C7DA91C2EDC78009C5E0A /* CALayer+PauseAimate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DA81C2EDC78009C5E0A /* CALayer+PauseAimate.m */; };
 		CDA052D71C26DBDF0041499B /* LYMusicListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA052D51C26DBDF0041499B /* LYMusicListCell.m */; };
 		CDA052D81C26DBDF0041499B /* LYMusicListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA052D61C26DBDF0041499B /* LYMusicListCell.xib */; };
 		CDA052DB1C26E2ED0041499B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA052DA1C26E2ED0041499B /* UIView+Extension.m */; };
@@ -129,6 +130,8 @@
 		CD9B44631C26ACEC004AB2AE /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		CD9B44641C26ACEC004AB2AE /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		CD9B44651C26ACEC004AB2AE /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		CD9C7DA71C2EDC78009C5E0A /* CALayer+PauseAimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+PauseAimate.h"; sourceTree = "<group>"; };
+		CD9C7DA81C2EDC78009C5E0A /* CALayer+PauseAimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+PauseAimate.m"; sourceTree = "<group>"; };
 		CDA052D41C26DBDF0041499B /* LYMusicListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMusicListCell.h; sourceTree = "<group>"; };
 		CDA052D51C26DBDF0041499B /* LYMusicListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMusicListCell.m; sourceTree = "<group>"; };
 		CDA052D61C26DBDF0041499B /* LYMusicListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYMusicListCell.xib; sourceTree = "<group>"; };
@@ -414,6 +417,8 @@
 			children = (
 				CDA052D91C26E2ED0041499B /* UIView+Extension.h */,
 				CDA052DA1C26E2ED0041499B /* UIView+Extension.m */,
+				CD9C7DA71C2EDC78009C5E0A /* CALayer+PauseAimate.h */,
+				CD9C7DA81C2EDC78009C5E0A /* CALayer+PauseAimate.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -729,6 +734,7 @@
 				CDADCACF1C2524E000F4AFC2 /* LYListTableViewController.m in Sources */,
 				CDA052E21C26EE0A0041499B /* LYMusicOperationTool.m in Sources */,
 				CD9B446E1C26ACEC004AB2AE /* NSObject+MJKeyValue.m in Sources */,
+				CD9C7DA91C2EDC78009C5E0A /* CALayer+PauseAimate.m in Sources */,
 				CD9B44701C26ACEC004AB2AE /* NSString+MJExtension.m in Sources */,
 				CDADCACC1C2524BF00F4AFC2 /* LYDetailViewController.m in Sources */,
 				CD987D031C271250007D22E7 /* LYMusicMessageModel.m in Sources */,

@@ -11,6 +11,7 @@
 #import "LYMusicMessageModel.h"
 #import "LYMusicModel.h"
 #import "LYTimeTool.h"
+#import "CALayer+PauseAimate.h"
 
 @interface LYDetailViewController ()
 
@@ -107,8 +108,10 @@
     
     if (sender.selected) {
         [[LYMusicOperationTool shareLYMusicOperationTool] playCurrentMusic];
+        [self resumeRotation];
     } else {
         [[LYMusicOperationTool shareLYMusicOperationTool] pauseCurrentMusic];
+        [self pauseRotation];
     }
 }
 
@@ -140,6 +143,7 @@
     // 获取工具类提供的播放音乐信息的数据模型(由工具类统一提供, 此处不需要关心如何获取, 只负责展示)
     LYMusicMessageModel *messageModel = [LYMusicOperationTool shareLYMusicOperationTool].messageModel;
     
+    // 专辑图片
     self.backImageView.image = [UIImage imageNamed:messageModel.musicModel.icon];
     self.iconImageView.image = [UIImage imageNamed:messageModel.musicModel.icon];
     
@@ -149,6 +153,14 @@
     self.singerNameLabel.text = messageModel.musicModel.singer;
     // 播放总时长
     self.totalTimeLabel.text = [LYTimeTool getFormatTimeWithTimeInterval:messageModel.totalTime];
+    
+    // 开始旋转图片
+    [self beginRotation];
+    if (messageModel.isPlaying) {
+        [self resumeRotation];
+    } else {
+        [self pauseRotation];
+    }
 }
 
 #pragma mark - 初始化设置
@@ -166,6 +178,41 @@
     [self.progressSlider setThumbImage:[UIImage imageNamed:@"player_slider_playback_thumb"] forState:UIControlStateNormal];
 }
 
+#pragma mark - 歌手头像旋转
+
+/**
+ *  开始旋转
+ */
+- (void)beginRotation
+{
+    [self.iconImageView.layer removeAnimationForKey:@"rotation"];
+    CABasicAnimation *animation = [[CABasicAnimation alloc] init];
+    animation.fromValue = @(0);
+    animation.toValue = @(M_PI * 2);
+    animation.duration = 30;
+    animation.keyPath = @"transform.rotation.z";
+    animation.repeatCount = NSIntegerMax;
+    animation.removedOnCompletion = NO;
+    [self.iconImageView.layer addAnimation:animation forKey:@"rotation"];
+}
+
+/**
+ *  暂停旋转(此处的实现, 是使用到了一个CALayer分类, 来暂停核心动画)
+ */
+- (void)pauseRotation
+{
+    [self.iconImageView.layer pauseAnimate];
+}
+
+/**
+ *  继续旋转(此处的实现, 是使用到了一个CALayer分类, 来暂停核心动画)
+ */
+- (void)resumeRotation
+{
+    [self.iconImageView.layer resumeAnimate];
+}
+
+
 /**
  *  设置当前的状态栏为白色
  *
@@ -176,6 +223,9 @@
     return UIStatusBarStyleLightContent;
 }
 
+/**
+ *  当视图被布局完成之后调用(因为直接在viewDidLoad方法中, 获取到得各个视图大小, 是在"豆腐块", 状态下的大小)
+ */
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
