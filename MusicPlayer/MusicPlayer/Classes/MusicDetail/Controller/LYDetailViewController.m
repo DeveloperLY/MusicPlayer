@@ -144,6 +144,74 @@
     [self setUpOnce];
 }
 
+#pragma mark - 播放器进度条事件
+/**
+ *  当进度条点击下去的事件
+ */
+- (IBAction)touchDown {
+    // 移除更新进度的timer
+    [self.updateTimer invalidate];
+    self.updateTimer = nil;
+}
+
+/**
+ *  当进度条点击松开时的事件
+ */
+- (IBAction)touchUp {
+    // 添加更新进度的timer
+    [self updateTimer];
+    
+    // 获取当前播放的音乐信息数据模型
+    LYMusicMessageModel *messageModel = [LYMusicOperationTool shareLYMusicOperationTool].messageModel;
+    
+    // 计算当前播放的时间
+    NSTimeInterval currentTime = messageModel.totalTime * self.progressSlider.value;
+    
+    // 根据当前时间, 确定歌曲播放的进度
+    [[LYMusicOperationTool shareLYMusicOperationTool] seekToTimeInterval:currentTime];
+}
+
+/**
+ *  当进度条值发生改变时调用
+ */
+- (IBAction)valueChange:(UISlider *)sender {
+    // 获取当前播放的音乐信息数据模型
+    LYMusicMessageModel *messageModel = [LYMusicOperationTool shareLYMusicOperationTool].messageModel;
+    
+    // 计算当前播放的时间
+    NSTimeInterval currentTime = messageModel.totalTime * sender.value;
+    
+    // 修改已经播放时长的label
+    self.costTimeLabel.text = [LYTimeTool getFormatTimeWithTimeInterval:currentTime];
+    
+}
+
+/**
+ *  当点击进度条任意一位置时调用的方法(tap手势)
+ */
+- (IBAction)seekToTime:(UITapGestureRecognizer *)sender {
+    //为了解决手势冲突,造成的timer被移除情况
+    [self updateTimer];
+    
+    // 获取当前播放的音乐信息数据模型
+    LYMusicMessageModel *messageModel = [LYMusicOperationTool shareLYMusicOperationTool].messageModel;
+    
+    // 获取手指触摸的点
+    CGPoint point = [sender locationInView:self.progressSlider];
+    
+    // 计算触摸点在整个视图上的比例
+    CGFloat scale = point.x / self.progressSlider.width;
+    
+    // 更改进度条的值
+    self.progressSlider.value = scale;
+    
+    // 计算当前播放的时间
+    NSTimeInterval currentTime = messageModel.totalTime * self.progressSlider.value;
+    
+    // 根据当前时间, 确定歌曲的播放进度
+    [[LYMusicOperationTool shareLYMusicOperationTool] seekToTimeInterval:currentTime];
+    
+}
 
 /************************初始化设置, 以下方法不涉及业务逻辑, 写一次基本上就不用了**********************************/
 

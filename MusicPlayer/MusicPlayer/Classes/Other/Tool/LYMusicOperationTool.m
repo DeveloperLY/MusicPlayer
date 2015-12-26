@@ -80,6 +80,16 @@ implementationSingleton(LYMusicOperationTool);
     [self playCurrentMusic];
 }
 
+/**
+ *  根据时间, 设置播放器的进度
+ *
+ *  @param currentTime 播放时间
+ */
+- (void)seekToTimeInterval:(NSTimeInterval)currentTime
+{
+    [self.audioTool seekToTimeInterval:currentTime];
+}
+
 
 /***********************懒加载, 或者重写的set方法***********************/
 #pragma mark - 加载, 或者重写的set方法

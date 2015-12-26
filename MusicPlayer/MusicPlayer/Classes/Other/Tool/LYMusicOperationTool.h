@@ -51,4 +51,9 @@ interfaceSingleton(LYMusicOperationTool);
  */
 - (void)preMusic;
 
+/**
+ *  设置播放的进度
+ */
+- (void)seekToTimeInterval:(NSTimeInterval)currentTime;
+
 @end

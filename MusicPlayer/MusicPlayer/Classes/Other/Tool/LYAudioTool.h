@@ -20,7 +20,7 @@
  *
  *  @param audioName 文件名
  *
- *  @return <#return value description#>
+ *  @return 当前播放器
  */
 - (AVAudioPlayer *)playAudioWithFileName:(NSString *)fileName;
 
@@ -33,5 +33,12 @@
  *  停止当前正在播放的音乐
  */
 - (void)stopAudio;
+
+/**
+ *  设置当前播放器的播放进度
+ *
+ *  @param currentTime 播放时间
+ */
+- (void)seekToTimeInterval:(NSTimeInterval)currentTime;
 
 @end

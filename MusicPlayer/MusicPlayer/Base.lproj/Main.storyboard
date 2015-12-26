@@ -169,6 +169,12 @@
                                                         <constraint firstAttribute="height" constant="30" id="aoW-UT-XX4"/>
                                                     </constraints>
                                                     <color key="minimumTrackTintColor" red="0.0" green="0.66612810860000005" blue="0.0013801952190000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="touchDown" destination="kPg-7b-VWZ" eventType="touchDown" id="iac-Vk-97l"/>
+                                                        <action selector="touchUp" destination="kPg-7b-VWZ" eventType="touchUpInside" id="koc-m6-x5d"/>
+                                                        <action selector="valueChange:" destination="kPg-7b-VWZ" eventType="valueChanged" id="2vp-cV-O4D"/>
+                                                        <outletCollection property="gestureRecognizers" destination="oDd-I8-Lda" appends="YES" id="VXv-KT-rg6"/>
+                                                    </connections>
                                                 </slider>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -276,6 +282,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewu-9v-Hd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oDd-I8-Lda">
+                    <connections>
+                        <action selector="seekToTime:" destination="kPg-7b-VWZ" id="a5S-jV-NXt"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="626" y="217"/>
         </scene>

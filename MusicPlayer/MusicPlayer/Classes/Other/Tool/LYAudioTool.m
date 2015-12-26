@@ -63,4 +63,10 @@
     self.currentPlayer = nil;
 }
 
+// 设置当前播放器的播放进度
+- (void)seekToTimeInterval:(NSTimeInterval)currentTime
+{
+    [self.currentPlayer setCurrentTime:currentTime];
+}
+
 @end
