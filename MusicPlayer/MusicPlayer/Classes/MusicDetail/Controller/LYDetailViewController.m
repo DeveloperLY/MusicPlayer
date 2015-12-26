@@ -12,6 +12,8 @@
 #import "LYMusicModel.h"
 #import "LYTimeTool.h"
 #import "CALayer+PauseAimate.h"
+#import "LYLrcViewController.h"
+#import "LYLrcDataTool.h"
 
 @interface LYDetailViewController ()
 
@@ -55,7 +57,7 @@
 /***************************以下属于其他功能实现的附加属性*********************************/
 
 /** 显示歌词的view*/
-@property (nonatomic, weak) UIView *lrcView;
+@property (nonatomic, weak) LYLrcViewController *lrcViewController;
 
 /** 用来刷新界面的timer */
 @property (nonatomic, strong) NSTimer *updateTimer;
@@ -243,6 +245,12 @@
     } else {
         [self pauseRotation];
     }
+    
+    // 加载歌词数据
+    NSArray *lrcModels = [LYLrcDataTool getLrcModelsWithFileName:messageModel.musicModel.lrcname];
+    
+    //
+    self.lrcViewController.lrcModels = lrcModels;
 }
 
 #pragma mark - setUpTimes
@@ -268,11 +276,8 @@
 #pragma mark - 初始化设置
 - (void)setUpInit
 {
-    // 添加负责显示歌词的视图
-    UIView *lrcView = [[UIView alloc] init];
-    self.lrcView = lrcView;
-    lrcView.backgroundColor = [UIColor orangeColor];
-    [self.lrcBackView addSubview:lrcView];
+    // 将歌词视图添加到背景占位
+    [self.lrcBackView addSubview:self.lrcViewController.tableView];
     self.lrcBackView.pagingEnabled = YES;
     self.lrcBackView.showsHorizontalScrollIndicator = NO;
     
@@ -333,8 +338,8 @@
     [super viewWillLayoutSubviews];
     
     // 设置歌词视图的frame
-    self.lrcView.frame = self.lrcBackView.bounds;
-    self.lrcView.x = self.lrcBackView.width;
+    self.lrcViewController.tableView.frame = self.lrcBackView.bounds;
+    self.lrcViewController.tableView.x = self.lrcBackView.width;
     
     // 设置歌词占位视图的contentSize
     self.lrcBackView.contentSize = CGSizeMake(self.lrcBackView.width * 2.0, 0);
@@ -342,7 +347,7 @@
     // 设置歌手头像为圆形
     self.iconImageView.layer.cornerRadius = self.iconImageView.width * 0.5;
     self.iconImageView.layer.masksToBounds = YES;
-    self.iconImageView.layer.borderWidth = 7.0;
+    self.iconImageView.layer.borderWidth = 6.0;
     self.iconImageView.layer.borderColor = [UIColor colorWithRed:36/255.0 green:36/255.0 blue:36/255.0 alpha:1.0].CGColor;
     
 }
@@ -363,6 +368,19 @@
     return _updateTimer;
 }
 
-
+/**
+ *  懒加载歌词显示控制器
+ *
+ *  @return 歌词控制器; 详情界面展示的歌词, 统一由此控制器管理(展示, 滚动, 进度等)
+ */
+- (LYLrcViewController *)lrcViewController
+{
+    if (!_lrcViewController) {
+        LYLrcViewController *lrcViewController = [[LYLrcViewController alloc] init];
+        [self addChildViewController:lrcViewController];
+        _lrcViewController = lrcViewController;
+    }
+    return _lrcViewController;
+}
 
 @end
