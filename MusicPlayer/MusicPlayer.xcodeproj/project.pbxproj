@@ -635,6 +635,11 @@
 					CDADCA7A1C2522A200F4AFC2 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 342VP95RM8;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					CDADCA931C2522A300F4AFC2 = {
 						CreatedOnToolsVersion = 7.2;

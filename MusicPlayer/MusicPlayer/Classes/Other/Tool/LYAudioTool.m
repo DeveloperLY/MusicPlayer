@@ -17,6 +17,27 @@
 
 @implementation LYAudioTool
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        [self backPlay];
+    }
+    return self;
+}
+
+
+- (void)backPlay
+{
+    // 获取音频会话
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    
+    // 设置会话类别为后台播放
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    
+    // 激活会话
+    [session setActive:YES error:nil];
+}
+
 /**
  *  根据歌曲名称, 播放一首音乐
  *
