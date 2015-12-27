@@ -69,4 +69,15 @@
     [self.currentPlayer setCurrentTime:currentTime];
 }
 
+/**
+ *  重写代理的set方法, 将代理设置为播放器的代理
+ *
+ *  @param delegate 代理对象
+ */
+- (void)setDelegate:(id<AVAudioPlayerDelegate>)delegate
+{
+    _delegate = delegate;
+    self.currentPlayer.delegate = delegate;
+}
+
 @end

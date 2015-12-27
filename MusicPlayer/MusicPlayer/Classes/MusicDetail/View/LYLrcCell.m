@@ -7,11 +7,8 @@
 //
 
 #import "LYLrcCell.h"
-#import "LYLrcLabel.h"
 
 @interface LYLrcCell ()
-
-@property (weak, nonatomic) IBOutlet LYLrcLabel *lrcLabel;
 
 @end
 

@@ -11,8 +11,11 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "LYLrcLabel.h"
 
 @interface LYLrcCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet LYLrcLabel *lrcLabel;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 

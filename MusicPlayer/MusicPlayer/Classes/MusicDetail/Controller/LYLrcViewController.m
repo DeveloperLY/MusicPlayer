@@ -30,6 +30,7 @@
 {
     self.view.backgroundColor = [UIColor clearColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.showsVerticalScrollIndicator = NO;
 }
 
 /**
@@ -114,8 +115,10 @@
     // 更新进度
     if (indexPath.row == self.scrollRow) {
         cell.progress = self.progress;
+        cell.lrcLabel.font = [UIFont systemFontOfSize:18.0];
     } else {
         cell.progress = 0;
+        cell.lrcLabel.font = [UIFont systemFontOfSize:15.0];
     }
     
     return cell;

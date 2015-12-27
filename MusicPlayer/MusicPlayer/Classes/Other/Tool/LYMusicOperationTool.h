@@ -11,10 +11,13 @@
  */
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
+#import <AVFoundation/AVFoundation.h>
 
 @class LYMusicModel, LYMusicMessageModel;
 
 @interface LYMusicOperationTool : NSObject
+
+interfaceSingleton(LYMusicOperationTool);
 
 /** 存放的播放列表 */
 @property (nonatomic, strong) NSArray <LYMusicModel *> *musicModels;
@@ -22,7 +25,9 @@
 /** 歌曲信息数据模型 */
 @property (nonatomic, strong) LYMusicMessageModel *messageModel;
 
-interfaceSingleton(LYMusicOperationTool);
+/** 设置代理, 用于传递音乐播放完成的事件给外界 */
+@property (nonatomic, weak) id <AVAudioPlayerDelegate> delegate;
+
 
 /**
  *  在播放某一首音乐对应的数据模型时
@@ -47,7 +52,7 @@ interfaceSingleton(LYMusicOperationTool);
 - (void)nextMusic;
 
 /**
- *  上一首
+ *  播放上一首
  */
 - (void)preMusic;
 

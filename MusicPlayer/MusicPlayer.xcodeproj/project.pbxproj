@@ -23,7 +23,6 @@
 		CD9B446F1C26ACEC004AB2AE /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44631C26ACEC004AB2AE /* NSObject+MJProperty.m */; };
 		CD9B44701C26ACEC004AB2AE /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9B44651C26ACEC004AB2AE /* NSString+MJExtension.m */; };
 		CD9C7DA91C2EDC78009C5E0A /* CALayer+PauseAimate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DA81C2EDC78009C5E0A /* CALayer+PauseAimate.m */; };
-		CD9C7DAC1C2EECA2009C5E0A /* LYLrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DAB1C2EECA2009C5E0A /* LYLrcViewController.m */; };
 		CD9C7DAF1C2EF010009C5E0A /* LYLrcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DAE1C2EF010009C5E0A /* LYLrcModel.m */; };
 		CD9C7DB21C2EF03C009C5E0A /* LYLrcDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DB11C2EF03C009C5E0A /* LYLrcDataTool.m */; };
 		CD9C7DB51C2EFDC4009C5E0A /* LYLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DB41C2EFDC4009C5E0A /* LYLrcLabel.m */; };
@@ -85,6 +84,7 @@
 		CDADCB231C25262B00F4AFC2 /* 309769.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CDADCAFA1C25262B00F4AFC2 /* 309769.mp3 */; };
 		CDADCB241C25262B00F4AFC2 /* 339744.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CDADCAFB1C25262B00F4AFC2 /* 339744.mp3 */; };
 		CDADCB251C25262B00F4AFC2 /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDADCAFC1C25262B00F4AFC2 /* Musics.plist */; };
+		CDE2D03A1C2F89FF00C5365D /* LYLrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DAB1C2EECA2009C5E0A /* LYLrcViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -744,6 +744,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE2D03A1C2F89FF00C5365D /* LYLrcViewController.m in Sources */,
 				CD9B446D1C26ACEC004AB2AE /* NSObject+MJCoding.m in Sources */,
 				CD9C7DB21C2EF03C009C5E0A /* LYLrcDataTool.m in Sources */,
 				CDA052DF1C26EB650041499B /* LYAudioTool.m in Sources */,
@@ -767,7 +768,6 @@
 				CD9B446E1C26ACEC004AB2AE /* NSObject+MJKeyValue.m in Sources */,
 				CD9C7DA91C2EDC78009C5E0A /* CALayer+PauseAimate.m in Sources */,
 				CD9C7DB51C2EFDC4009C5E0A /* LYLrcLabel.m in Sources */,
-				CD9C7DAC1C2EECA2009C5E0A /* LYLrcViewController.m in Sources */,
 				CD9B44701C26ACEC004AB2AE /* NSString+MJExtension.m in Sources */,
 				CDADCACC1C2524BF00F4AFC2 /* LYDetailViewController.m in Sources */,
 				CD987D031C271250007D22E7 /* LYMusicMessageModel.m in Sources */,

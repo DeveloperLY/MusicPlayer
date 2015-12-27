@@ -17,7 +17,7 @@
 #import "LYLrcModel.h"
 #import "LYLrcLabel.h"
 
-@interface LYDetailViewController () <UIScrollViewDelegate>
+@interface LYDetailViewController () <UIScrollViewDelegate, AVAudioPlayerDelegate>
 
 /** 歌词的占位背景视图 */
 @property (weak, nonatomic) IBOutlet UIScrollView *lrcBackView;
@@ -331,6 +331,9 @@
     
     // 设置进度条图片
     [self.progressSlider setThumbImage:[UIImage imageNamed:@"player_slider_playback_thumb"] forState:UIControlStateNormal];
+    
+    // 设播放器工具类代理
+    [LYMusicOperationTool shareLYMusicOperationTool].delegate = self;
 }
 
 #pragma mark - 歌手头像旋转
@@ -443,6 +446,14 @@
         [_updateLrcLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     }
     return _updateLrcLink;
+}
+
+#pragma mark - 音乐播放完成代理方法
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    if (flag) {
+        [self nextMusic];
+    }
 }
 
 @end
