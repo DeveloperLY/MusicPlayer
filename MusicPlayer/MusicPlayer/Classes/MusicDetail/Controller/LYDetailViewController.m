@@ -224,6 +224,40 @@
     
 }
 
+/******************远程事件的接收**********************/
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event
+{
+    switch (event.subtype) {
+        case UIEventSubtypeRemoteControlPlay:
+        {
+            [[LYMusicOperationTool shareLYMusicOperationTool] playCurrentMusic];
+            break;
+        }
+        case UIEventSubtypeRemoteControlPause:
+        {
+            [[LYMusicOperationTool shareLYMusicOperationTool] pauseCurrentMusic];
+            break;
+        }
+        case UIEventSubtypeRemoteControlNextTrack:
+        {
+            [[LYMusicOperationTool shareLYMusicOperationTool] nextMusic];
+            break;
+        }
+        case UIEventSubtypeRemoteControlPreviousTrack:
+        {
+            [[LYMusicOperationTool shareLYMusicOperationTool] preMusic];
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+    [self setUpOnce];
+}
+
+
 /************************初始化设置, 以下方法不涉及业务逻辑, 写一次基本上就不用了**********************************/
 
 #pragma mark - setUpOnce
@@ -337,6 +371,14 @@
     
     // 设播放器工具类代理
     [LYMusicOperationTool shareLYMusicOperationTool].delegate = self;
+}
+
+/**
+ *  当控制器销毁时, 移除单例的代理, 防止出现"野指针"错误
+ */
+- (void)dealloc
+{
+    [LYMusicOperationTool shareLYMusicOperationTool].delegate = nil;
 }
 
 #pragma mark - 歌手头像旋转
