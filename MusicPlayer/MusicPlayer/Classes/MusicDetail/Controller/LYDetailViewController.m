@@ -304,6 +304,9 @@
     // 传值给歌词控制器, 让歌词控制器的歌词负责进度展示
     self.lrcViewController.progress = self.lrcLabel.progress;
     
+    // 更新锁屏界面的信息
+    [[LYMusicOperationTool shareLYMusicOperationTool] updateLockScreenInfo];
+    
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -451,9 +454,7 @@
 #pragma mark - 音乐播放完成代理方法
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
-    if (flag) {
-        [self nextMusic];
-    }
+    [self nextMusic];
 }
 
 @end

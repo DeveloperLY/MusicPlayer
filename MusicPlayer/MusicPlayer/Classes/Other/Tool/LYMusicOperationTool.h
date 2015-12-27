@@ -61,4 +61,9 @@ interfaceSingleton(LYMusicOperationTool);
  */
 - (void)seekToTimeInterval:(NSTimeInterval)currentTime;
 
+/**
+ *  更新锁屏信息
+ */
+- (void)updateLockScreenInfo;
+
 @end

@@ -10,6 +10,9 @@
 #import "LYAudioTool.h"
 #import "LYMusicModel.h"
 #import "LYMusicMessageModel.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import "LYLrcDataTool.h"
+#import "LYLrcModel.h"
 
 @interface LYMusicOperationTool ()
 
@@ -68,8 +71,7 @@ implementationSingleton(LYMusicOperationTool);
 - (void)preMusic
 {
     self.currentIndex --;
-    LYMusicModel *musicModel = self.musicModels[_currentIndex];
-    [self playMusicWithMusicModel:musicModel];
+    [self playCurrentMusic];
 }
 
 /**
@@ -78,8 +80,7 @@ implementationSingleton(LYMusicOperationTool);
 - (void)nextMusic
 {
     self.currentIndex ++;
-    LYMusicModel *musicModel = self.musicModels[_currentIndex];
-    [self playMusicWithMusicModel:musicModel];
+    [self playCurrentMusic];
 }
 
 /**
@@ -92,6 +93,36 @@ implementationSingleton(LYMusicOperationTool);
     [self.audioTool seekToTimeInterval:currentTime];
 }
 
+/**
+ *  更新锁屏信息
+ */
+- (void)updateLockScreenInfo
+{
+    // 获取当前播放的数据模型
+    LYMusicMessageModel *messageModel = self.messageModel;
+    
+    // 获取当前锁屏的播放信息中心
+    MPNowPlayingInfoCenter *center = [MPNowPlayingInfoCenter defaultCenter];
+    
+    UIImage *image = [UIImage imageNamed:messageModel.musicModel.icon];
+    
+    MPMediaItemArtwork *artwork = [[MPMediaItemArtwork alloc] initWithImage:image];
+    
+    // 赋值
+    NSDictionary *dict = @{
+                          MPMediaItemPropertyAlbumTitle : messageModel.musicModel.name, // 歌曲名称
+                          MPMediaItemPropertyPlaybackDuration : @(messageModel.totalTime), // 歌曲总时长
+                          MPNowPlayingInfoPropertyElapsedPlaybackTime : @(messageModel.costTime), // 歌曲已经播放的时长
+                          MPMediaItemPropertyArtist : messageModel.musicModel.singer,
+                          MPMediaItemPropertyArtwork :  artwork
+                          };
+    
+    center.nowPlayingInfo = dict;
+    
+    
+    // 开启接收远程事件
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+}
 
 /***********************懒加载, 或者重写的set方法***********************/
 #pragma mark - 懒加载, 或者重写的set方法
