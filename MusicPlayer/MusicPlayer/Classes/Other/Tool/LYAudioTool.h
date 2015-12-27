@@ -15,10 +15,6 @@
 
 @interface LYAudioTool : NSObject
 
-/** 设置代理, 让外界监听音乐播放完成事件 */
-@property (nonatomic, weak) id<AVAudioPlayerDelegate> delegate;
-
-
 /**
  *  根据文件名, 播放一首音乐
  *

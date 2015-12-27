@@ -9,6 +9,8 @@
 #ifndef MusicPlayer_pch
 #define MusicPlayer_pch
 
+#define kNotificationPlayFinish @"notificationPlayFinish"
+
 #import "UIView+Extension.h"
 
 #endif /* MusicPlayer_pch */

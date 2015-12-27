@@ -8,7 +8,7 @@
 
 #import "LYAudioTool.h"
 
-@interface LYAudioTool ()
+@interface LYAudioTool () <AVAudioPlayerDelegate>
 
 /** 当前播放器对象 */
 @property (nonatomic, strong) AVAudioPlayer *currentPlayer;
@@ -64,6 +64,10 @@
     // 根据资源路径, 创建播放器对象
     self.currentPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
     
+    
+    // 设置播放器的代理
+    self.currentPlayer.delegate = self;
+    
     // 开始播放
     [self.currentPlayer prepareToPlay];
     [self.currentPlayer play];
@@ -90,15 +94,18 @@
     [self.currentPlayer setCurrentTime:currentTime];
 }
 
+#pragma mark - AVAudioPlayerDelegate
 /**
- *  重写代理的set方法, 将代理设置为播放器的代理
+ *  音乐播放完成, 发送通知告诉外界
  *
- *  @param delegate 代理对象
+ *  @param player 音乐播放器
+ *  @param flag   是否完成
  */
-- (void)setDelegate:(id<AVAudioPlayerDelegate>)delegate
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
-    _delegate = delegate;
-    self.currentPlayer.delegate = delegate;
+    if (flag) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationPlayFinish object:self.currentPlayer];
+    }
 }
 
 @end

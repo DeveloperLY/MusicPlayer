@@ -72,8 +72,7 @@ implementationSingleton(LYMusicOperationTool);
 - (void)preMusic
 {
     self.currentIndex --;
-    LYMusicModel *musicModel = self.musicModels[self.currentIndex];
-    [self playMusicWithMusicModel:musicModel];
+    [self playCurrentMusic];
 }
 
 /**
@@ -82,8 +81,7 @@ implementationSingleton(LYMusicOperationTool);
 - (void)nextMusic
 {
     self.currentIndex ++;
-    LYMusicModel *musicModel = self.musicModels[self.currentIndex];
-    [self playMusicWithMusicModel:musicModel];
+    [self playCurrentMusic];
 }
 
 /**
@@ -140,15 +138,6 @@ implementationSingleton(LYMusicOperationTool);
 
 /***********************懒加载, 或者重写的set方法***********************/
 #pragma mark - 懒加载, 或者重写的set方法
-/**
- *  重写代理的set方法, 将代理传递给单首音乐播放的工具类
- *
- *  @param delegate 代理
- */
-- (void)setDelegate:(id<AVAudioPlayerDelegate>)delegate
-{
-    self.audioTool.delegate = delegate;
-}
 
 /**
  *  懒加载负责单首音乐播放的工具类

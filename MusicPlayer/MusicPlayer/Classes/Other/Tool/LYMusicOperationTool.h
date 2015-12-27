@@ -25,9 +25,6 @@ interfaceSingleton(LYMusicOperationTool);
 /** 歌曲信息数据模型 */
 @property (nonatomic, strong) LYMusicMessageModel *messageModel;
 
-/** 设置代理, 用于传递音乐播放完成的事件给外界 */
-@property (nonatomic, weak) id <AVAudioPlayerDelegate> delegate;
-
 
 /**
  *  在播放某一首音乐对应的数据模型时
