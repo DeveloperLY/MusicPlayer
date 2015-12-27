@@ -84,6 +84,7 @@
 		CDADCB231C25262B00F4AFC2 /* 309769.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CDADCAFA1C25262B00F4AFC2 /* 309769.mp3 */; };
 		CDADCB241C25262B00F4AFC2 /* 339744.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CDADCAFB1C25262B00F4AFC2 /* 339744.mp3 */; };
 		CDADCB251C25262B00F4AFC2 /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDADCAFC1C25262B00F4AFC2 /* Musics.plist */; };
+		CDE028C71C2FBD2F00CDF85A /* LYImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE028C61C2FBD2F00CDF85A /* LYImageTool.m */; };
 		CDE2D03A1C2F89FF00C5365D /* LYLrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C7DAB1C2EECA2009C5E0A /* LYLrcViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -219,6 +220,8 @@
 		CDADCAFA1C25262B00F4AFC2 /* 309769.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 309769.mp3; sourceTree = "<group>"; };
 		CDADCAFB1C25262B00F4AFC2 /* 339744.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 339744.mp3; sourceTree = "<group>"; };
 		CDADCAFC1C25262B00F4AFC2 /* Musics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Musics.plist; sourceTree = "<group>"; };
+		CDE028C51C2FBD2F00CDF85A /* LYImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYImageTool.h; sourceTree = "<group>"; };
+		CDE028C61C2FBD2F00CDF85A /* LYImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYImageTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,6 +493,8 @@
 				CDA052E11C26EE0A0041499B /* LYMusicOperationTool.m */,
 				CD987D041C271977007D22E7 /* LYTimeTool.h */,
 				CD987D051C271977007D22E7 /* LYTimeTool.m */,
+				CDE028C51C2FBD2F00CDF85A /* LYImageTool.h */,
+				CDE028C61C2FBD2F00CDF85A /* LYImageTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -751,6 +756,7 @@
 			files = (
 				CDE2D03A1C2F89FF00C5365D /* LYLrcViewController.m in Sources */,
 				CD9B446D1C26ACEC004AB2AE /* NSObject+MJCoding.m in Sources */,
+				CDE028C71C2FBD2F00CDF85A /* LYImageTool.m in Sources */,
 				CD9C7DB21C2EF03C009C5E0A /* LYLrcDataTool.m in Sources */,
 				CDA052DF1C26EB650041499B /* LYAudioTool.m in Sources */,
 				CD9B44671C26ACEC004AB2AE /* MJExtensionConst.m in Sources */,

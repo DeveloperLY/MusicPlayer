@@ -13,6 +13,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "LYLrcDataTool.h"
 #import "LYLrcModel.h"
+#import "LYImageTool.h"
 
 @interface LYMusicOperationTool ()
 
@@ -105,6 +106,17 @@ implementationSingleton(LYMusicOperationTool);
     MPNowPlayingInfoCenter *center = [MPNowPlayingInfoCenter defaultCenter];
     
     UIImage *image = [UIImage imageNamed:messageModel.musicModel.icon];
+    
+    // 获取到当前播放的歌词, 然后, 绘制到图片上, 生成一个新的图片,当做专辑图片展示
+    // 获取歌词
+    NSArray *lrcModels = [LYLrcDataTool getLrcModelsWithFileName:messageModel.musicModel.lrcname];
+    
+    NSInteger row = [LYLrcDataTool getRowWithCurrentTime:messageModel.costTime lrcModels:lrcModels];
+    
+    LYLrcModel *lrcModel = lrcModels[row];
+    
+    // 把歌词绘制到图片上
+    image = [LYImageTool createImageWithText:lrcModel.lrcText inImage:image];
     
     MPMediaItemArtwork *artwork = [[MPMediaItemArtwork alloc] initWithImage:image];
     
