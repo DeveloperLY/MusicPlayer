@@ -72,7 +72,8 @@ implementationSingleton(LYMusicOperationTool);
 - (void)preMusic
 {
     self.currentIndex --;
-    [self playCurrentMusic];
+    LYMusicModel *musicModel = self.musicModels[self.currentIndex];
+    [self playMusicWithMusicModel:musicModel];
 }
 
 /**
@@ -81,7 +82,8 @@ implementationSingleton(LYMusicOperationTool);
 - (void)nextMusic
 {
     self.currentIndex ++;
-    [self playCurrentMusic];
+    LYMusicModel *musicModel = self.musicModels[self.currentIndex];
+    [self playMusicWithMusicModel:musicModel];
 }
 
 /**
