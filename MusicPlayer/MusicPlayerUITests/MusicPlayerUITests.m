@@ -3,7 +3,7 @@
 //  MusicPlayerUITests
 //
 //  Created by Y Liu on 15/12/19.
-//  Copyright © 2015年 CoderYLiu. All rights reserved.
+//  Copyright © 2015年 DeveloperLY. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

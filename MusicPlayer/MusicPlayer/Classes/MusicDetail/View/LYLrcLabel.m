@@ -3,7 +3,7 @@
 //  MusicPlayer
 //
 //  Created by Y Liu on 15/12/27.
-//  Copyright © 2015年 CoderYLiu. All rights reserved.
+//  Copyright © 2015年 DeveloperLY. All rights reserved.
 //
 
 #import "LYLrcLabel.h"

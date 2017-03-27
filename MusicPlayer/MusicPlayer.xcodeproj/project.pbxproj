@@ -39,7 +39,6 @@
 		CDADCA991C2522A300F4AFC2 /* MusicPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADCA981C2522A300F4AFC2 /* MusicPlayerTests.m */; };
 		CDADCAA41C2522A300F4AFC2 /* MusicPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADCAA31C2522A300F4AFC2 /* MusicPlayerUITests.m */; };
 		CDADCAC41C25237800F4AFC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADCAC01C25237800F4AFC2 /* AppDelegate.m */; };
-		CDADCAC51C25237800F4AFC2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDADCAC11C25237800F4AFC2 /* Info.plist */; };
 		CDADCAC61C25237800F4AFC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADCAC21C25237800F4AFC2 /* main.m */; };
 		CDADCACC1C2524BF00F4AFC2 /* LYDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADCACB1C2524BF00F4AFC2 /* LYDetailViewController.m */; };
 		CDADCACF1C2524E000F4AFC2 /* LYListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADCACE1C2524E000F4AFC2 /* LYListTableViewController.m */; };
@@ -634,8 +633,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = LY;
-				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = CoderYLiu;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = DeveloperLY;
 				TargetAttributes = {
 					CDADCA7A1C2522A200F4AFC2 = {
 						CreatedOnToolsVersion = 7.2;
@@ -687,7 +686,6 @@
 				CDADCB141C25262B00F4AFC2 /* 12309111.lrc in Resources */,
 				CDADCB171C25262B00F4AFC2 /* 255319.lrc in Resources */,
 				CDADCB1E1C25262B00F4AFC2 /* 120125029.mp3 in Resources */,
-				CDADCAC51C25237800F4AFC2 /* Info.plist in Resources */,
 				CDADCAFE1C25262B00F4AFC2 /* bb_icon@2x.jpg in Resources */,
 				CDADCB0E1C25262B00F4AFC2 /* wf_icon@2x.jpg in Resources */,
 				CDADCB0C1C25262B00F4AFC2 /* nanquan_icon@2x.jpg in Resources */,
@@ -851,8 +849,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -874,7 +874,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -894,8 +894,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -911,7 +913,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -927,7 +929,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)//MusicPlayer/Classes/Other/System/MusicPlayer.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MusicPlayer/Classes/Other/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderYLiu.MusicPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = net.developerly.MusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -941,7 +943,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)//MusicPlayer/Classes/Other/System/MusicPlayer.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MusicPlayer/Classes/Other/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderYLiu.MusicPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = net.developerly.MusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

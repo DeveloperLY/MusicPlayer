@@ -54,32 +54,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dzq.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VdV-GR-X6g">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dzq.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VdV-GR-X6g">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j7g-C0-WZl">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7g-C0-WZl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CyP-e1-cG3">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HPV-IU-wp5" userLabel="top">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPV-IU-wp5" userLabel="top">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="歌曲名称" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89J-AY-FnF" userLabel="歌曲名称">
-                                                    <rect key="frame" x="266" y="30" width="68" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歌曲名称" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89J-AY-FnF" userLabel="歌曲名称">
+                                                    <rect key="frame" x="153" y="30" width="69.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="歌手" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfU-So-zUe" userLabel="歌手">
-                                                    <rect key="frame" x="287" y="59" width="26" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歌手" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfU-So-zUe" userLabel="歌手">
+                                                    <rect key="frame" x="174.5" y="59" width="27" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3L-Ln-FVJ" userLabel="更多">
-                                                    <rect key="frame" x="547" y="30" width="45" height="45"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3L-Ln-FVJ" userLabel="更多">
+                                                    <rect key="frame" x="322" y="30" width="45" height="45"/>
                                                     <state key="normal" image="main_tab_more"/>
                                                     <connections>
                                                         <action selector="more" destination="kPg-7b-VWZ" eventType="touchUpInside" id="A6r-JD-5wG"/>
@@ -111,11 +111,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="o3L-Ln-FVJ" secondAttribute="trailing" constant="8" id="wf4-o9-Msi"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1n-2B-Zco" userLabel="bottom">
-                                            <rect key="frame" x="0.0" y="472" width="600" height="128"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1n-2B-Zco" userLabel="bottom">
+                                            <rect key="frame" x="0.0" y="539" width="375" height="128"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWT-h3-yT9" userLabel="播放/暂停">
-                                                    <rect key="frame" x="268" y="46" width="64" height="64"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWT-h3-yT9" userLabel="播放/暂停">
+                                                    <rect key="frame" x="155.5" y="46" width="64" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="64" id="JJj-bV-94F"/>
                                                         <constraint firstAttribute="width" constant="64" id="NSR-3W-NgK"/>
@@ -126,15 +126,15 @@
                                                         <action selector="playOrPause:" destination="kPg-7b-VWZ" eventType="touchUpInside" id="d6n-3U-v1S"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3p-4T-7mm" userLabel="上一首">
-                                                    <rect key="frame" x="154" y="46" width="64" height="64"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3p-4T-7mm" userLabel="上一首">
+                                                    <rect key="frame" x="41.5" y="46" width="64" height="64"/>
                                                     <state key="normal" image="player_btn_pre_normal"/>
                                                     <connections>
                                                         <action selector="preMusic" destination="kPg-7b-VWZ" eventType="touchUpInside" id="lM3-Sa-7uX"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqi-ZG-DLk" userLabel="下一首">
-                                                    <rect key="frame" x="382" y="46" width="64" height="64"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqi-ZG-DLk" userLabel="下一首">
+                                                    <rect key="frame" x="269.5" y="46" width="64" height="64"/>
                                                     <state key="normal" image="player_btn_next_normal"/>
                                                     <connections>
                                                         <action selector="nextMusic" destination="kPg-7b-VWZ" eventType="touchUpInside" id="1gK-FD-KU8"/>
@@ -156,8 +156,8 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bj-C7-I0O" userLabel="歌曲时长">
-                                                    <rect key="frame" x="553" y="8" width="37" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bj-C7-I0O" userLabel="歌曲时长">
+                                                    <rect key="frame" x="328" y="8" width="37" height="15"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="ZmJ-KP-IMe"/>
@@ -166,8 +166,8 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="b0S-Yz-l2Y" userLabel="歌曲进度">
-                                                    <rect key="frame" x="55" y="0.0" width="490" height="31"/>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="b0S-Yz-l2Y" userLabel="歌曲进度">
+                                                    <rect key="frame" x="55" y="0.0" width="265" height="31"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="aoW-UT-XX4"/>
@@ -210,23 +210,23 @@
                                                 </mask>
                                             </variation>
                                         </view>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IcW-ar-m9M" userLabel="middle">
-                                            <rect key="frame" x="0.0" y="100" width="600" height="372"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcW-ar-m9M" userLabel="middle">
+                                            <rect key="frame" x="0.0" y="100" width="375" height="439"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dzq.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="O3f-qi-gmd" userLabel="歌手头像">
-                                                    <rect key="frame" x="164" y="50" width="272" height="272"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dzq.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="O3f-qi-gmd" userLabel="歌手头像">
+                                                    <rect key="frame" x="18" y="50" width="339" height="339"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="O3f-qi-gmd" secondAttribute="height" multiplier="1:1" id="ZQp-0L-jjP"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="歌词" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbH-4h-mS4" userLabel="歌词" customClass="LYLrcLabel">
-                                                    <rect key="frame" x="283" y="337" width="34" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歌词" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbH-4h-mS4" userLabel="歌词" customClass="LYLrcLabel">
+                                                    <rect key="frame" x="170" y="404" width="35" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eqe-9d-pqJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="372"/>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqe-9d-pqJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="439"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="kPg-7b-VWZ" id="hNu-gH-VeY"/>
                                                     </connections>

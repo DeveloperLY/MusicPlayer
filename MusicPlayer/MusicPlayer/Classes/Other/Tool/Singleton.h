@@ -3,7 +3,7 @@
 //  MusicPlayer
 //
 //  Created by Y Liu on 15/12/20.
-//  Copyright © 2015年 CoderYLiu. All rights reserved.
+//  Copyright © 2015年 DeveloperLY. All rights reserved.
 //
 
 // 以后就可以使用interfaceSingleton来替代后面的方法声明
