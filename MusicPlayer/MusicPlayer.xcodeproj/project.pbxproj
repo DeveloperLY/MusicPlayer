@@ -154,7 +154,7 @@
 		CDA052D61C26DBDF0041499B /* LYMusicListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYMusicListCell.xib; sourceTree = "<group>"; };
 		CDA052D91C26E2ED0041499B /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		CDA052DA1C26E2ED0041499B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		CDA052DC1C26E44E0041499B /* MusicPlayer.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPlayer.pch; sourceTree = "<group>"; };
+		CDA052DC1C26E44E0041499B /* MusicPlayer.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MusicPlayer.pch; path = Classes/Other/System/MusicPlayer.pch; sourceTree = "<group>"; };
 		CDA052DD1C26EB650041499B /* LYAudioTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAudioTool.h; sourceTree = "<group>"; };
 		CDA052DE1C26EB650041499B /* LYAudioTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAudioTool.m; sourceTree = "<group>"; };
 		CDA052E01C26EE0A0041499B /* LYMusicOperationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMusicOperationTool.h; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		CDA052E31C26EE5A0041499B /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		CDADCA7B1C2522A200F4AFC2 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDADCA881C2522A200F4AFC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CDADCA8A1C2522A200F4AFC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDADCA8A1C2522A200F4AFC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		CDADCA8D1C2522A200F4AFC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDADCA941C2522A300F4AFC2 /* MusicPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDADCA981C2522A300F4AFC2 /* MusicPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicPlayerTests.m; sourceTree = "<group>"; };
@@ -172,8 +172,8 @@
 		CDADCAA51C2522A300F4AFC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDADCABF1C25237800F4AFC2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CDADCAC01C25237800F4AFC2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CDADCAC11C25237800F4AFC2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDADCAC21C25237800F4AFC2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CDADCAC11C25237800F4AFC2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Classes/Other/System/Info.plist; sourceTree = "<group>"; };
+		CDADCAC21C25237800F4AFC2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/Other/System/main.m; sourceTree = "<group>"; };
 		CDADCACA1C2524BF00F4AFC2 /* LYDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYDetailViewController.h; sourceTree = "<group>"; };
 		CDADCACB1C2524BF00F4AFC2 /* LYDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDetailViewController.m; sourceTree = "<group>"; };
 		CDADCACD1C2524E000F4AFC2 /* LYListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYListTableViewController.h; sourceTree = "<group>"; };
@@ -248,6 +248,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD525DAB1E893B940077E848 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CDADCA8C1C2522A200F4AFC2 /* LaunchScreen.storyboard */,
+				CDADCA871C2522A200F4AFC2 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		CD525DAC1E893BD10077E848 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				CDADCAFC1C25262B00F4AFC2 /* Musics.plist */,
+			);
+			name = plist;
+			sourceTree = "<group>";
+		};
 		CD9B444E1C26ACEC004AB2AE /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +318,8 @@
 		CDADCA7D1C2522A200F4AFC2 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				CDADCAD01C25262B00F4AFC2 /* Resources */,
+				CD525DAB1E893B940077E848 /* Storyboard */,
 				CDADCAB11C25237800F4AFC2 /* Classes */,
 				CDADCA7E1C2522A200F4AFC2 /* Supporting Files */,
 			);
@@ -310,10 +329,9 @@
 		CDADCA7E1C2522A200F4AFC2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CDADCAD01C25262B00F4AFC2 /* Resources */,
-				CDADCA871C2522A200F4AFC2 /* Main.storyboard */,
-				CDADCA8A1C2522A200F4AFC2 /* Assets.xcassets */,
-				CDADCA8C1C2522A200F4AFC2 /* LaunchScreen.storyboard */,
+				CDADCAC11C25237800F4AFC2 /* Info.plist */,
+				CDADCAC21C25237800F4AFC2 /* main.m */,
+				CDA052DC1C26E44E0041499B /* MusicPlayer.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -339,6 +357,7 @@
 		CDADCAB11C25237800F4AFC2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CDADCABE1C25237800F4AFC2 /* AppDelegate */,
 				CDADCAB61C25237800F4AFC2 /* MusicList */,
 				CDADCAB21C25237800F4AFC2 /* MusicDetail */,
 				CDADCABA1C25237800F4AFC2 /* Other */,
@@ -434,7 +453,6 @@
 				CDADCABB1C25237800F4AFC2 /* Category */,
 				CDADCABC1C25237800F4AFC2 /* DataTool */,
 				CDADCABD1C25237800F4AFC2 /* Lib */,
-				CDADCABE1C25237800F4AFC2 /* System */,
 				CDADCAC31C25237800F4AFC2 /* Tool */,
 			);
 			path = Other;
@@ -470,16 +488,14 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
-		CDADCABE1C25237800F4AFC2 /* System */ = {
+		CDADCABE1C25237800F4AFC2 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				CDADCABF1C25237800F4AFC2 /* AppDelegate.h */,
 				CDADCAC01C25237800F4AFC2 /* AppDelegate.m */,
-				CDADCAC11C25237800F4AFC2 /* Info.plist */,
-				CDADCAC21C25237800F4AFC2 /* main.m */,
-				CDA052DC1C26E44E0041499B /* MusicPlayer.pch */,
 			);
-			path = System;
+			name = AppDelegate;
+			path = Other/System;
 			sourceTree = "<group>";
 		};
 		CDADCAC31C25237800F4AFC2 /* Tool */ = {
@@ -501,10 +517,11 @@
 		CDADCAD01C25262B00F4AFC2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CD525DAC1E893BD10077E848 /* plist */,
+				CDADCA8A1C2522A200F4AFC2 /* Assets.xcassets */,
 				CDADCAD11C25262B00F4AFC2 /* Images */,
 				CDADCAE61C25262B00F4AFC2 /* Lrcs */,
 				CDADCAF11C25262B00F4AFC2 /* MP3s */,
-				CDADCAFC1C25262B00F4AFC2 /* Musics.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
